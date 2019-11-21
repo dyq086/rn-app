@@ -2,7 +2,7 @@
  * @Author: yongqing
  * @Date:   2019-11-18 17:28:57
  * @Last Modified by:   yongqing
- * @Last Modified time: 2019-11-19 11:09:32
+ * @Last Modified time: 2019-11-21 15:25:24
  */
 import React from 'react';
 
@@ -27,8 +27,7 @@ const BottomTabNavigator = createBottomTabNavigator({
                 />
             )
         }
-    },
-    My: {
+    }, My: {
         screen: My,
         navigationOptions: {
             title: '我的',
