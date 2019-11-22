@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>js 与webview 交互</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
 </head>
 
 <body>
-    <div>js 与webview 交互测试</div>
+    <div style="font-size: 24px">js 与webview 交互测试</div>
+    <button onclick="reload()">刷新</button>
 </body>
+<script type="text/javascript" src="https://cdn.bootcss.com/vConsole/3.3.4/vconsole.min.js"></script>
 <script type="text/javascript">
 window.onload = function() {
-    alert("aa");
+    var vConsole = new VConsole();
+    console.log(navigator.userAgent)
+}
+
+function reload(){
+	location.reload();
 }
 </script>
 
