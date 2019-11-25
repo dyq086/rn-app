@@ -1,8 +1,8 @@
 {
-  "name": "myApp",
+  "name": "taroApp",
   "version": "1.0.0",
   "private": true,
-  "description": "This my frist app",
+  "description": "This my taro project",
   "templateInfo": {
     "name": "mobx",
     "typescript": false,

@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "./dist",
-  "projectname": "myApp",
-  "description": "This my frist app",
+  "projectname": "taroApp",
+  "description": "This my taro project",
   "appid": "touristappid",
   "setting": {
     "urlCheck": true,
