@@ -15,16 +15,13 @@ class Introduction extends Component {
 
     componentDidHide() {}
 
-
     render() {
-        const {
-            counterStore: {
+        const {counterStore: {
                 good_info
-            }
-        } = this.props
+            }} = this.props
         return (
             <View className='index'>
-             
+
                 <Text>{good_info.introduction}</Text>
             </View>
         )
