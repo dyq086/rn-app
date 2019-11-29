@@ -18,10 +18,9 @@ const counterStore = observable({
       this.counter++
     }, 1000)
   },
-  getGoodList() {
-    getGoodsDetail({id: 3270, sence: 5}).then((res) => {
-      this.good_info = res.data;
-    })
+  async getGoodList() {
+    let res = await getGoodsDetail({id: 3270, sence: 5})
+    this.good_info = res.data;
   }
 })
 export default counterStore
