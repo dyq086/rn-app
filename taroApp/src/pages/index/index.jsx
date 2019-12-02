@@ -2,7 +2,8 @@ import Taro, {Component} from '@tarojs/taro'
 import {View, Button, Text} from '@tarojs/components'
 import {observer, inject} from '@tarojs/mobx'
 import './index.less'
-import Introduction from './list'
+import {DropdownMenu, DropdownItem} from '@/components/dropdown-menu/index'
+
 @inject('counterStore')
 @observer
 class Index extends Component {
@@ -14,12 +15,10 @@ class Index extends Component {
   componentWillMount() {}
 
   componentWillReact(...arg) {
-    console.log('componentWillReact',arg)
+    console.log('componentWillReact', arg)
   }
 
-  componentDidMount() {
-    
-  }
+  componentDidMount() {}
 
   componentWillUnmount() {}
 
@@ -48,11 +47,9 @@ class Index extends Component {
       }} = this.props
     return (
       <View className='index'>
-        <Button onClick={this.increment}>+</Button>
-        <Button onClick={this.decrement}>-</Button>
-        <Button onClick={this.incrementAsync}>Add Async</Button>
-        <Text>{counter}</Text>
-        <Introduction></Introduction>
+        <DropdownMenu color="red">
+          <DropdownItem ></DropdownItem>
+        </DropdownMenu>
       </View>
     )
   }
