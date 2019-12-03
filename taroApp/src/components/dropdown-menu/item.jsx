@@ -7,7 +7,7 @@ class DropdownItem extends Component {
         return (
             <View>
                 <Text className="mycolor" onClick={() => {
-                    console.log(Event)
+                  Event.emit("menuvalue",{a:1,b:2})
                     }}>我是子组件各自的啊32</Text>
             </View>
         );

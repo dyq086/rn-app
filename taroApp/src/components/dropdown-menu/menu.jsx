@@ -3,6 +3,14 @@ import {View, Button, Text} from '@tarojs/components'
 import Event from '@/utils/event'
 import './index.less'
 class DropdownMenu extends Component {
+
+
+    componentDidMount () {
+        Event.on("menuvalue",(value) => {
+            console.log(this,value)
+        })
+    }
+    
     render() {
         return (
             <View>
@@ -10,9 +18,7 @@ class DropdownMenu extends Component {
                     <View
                         className="dropdown-menu__item"
                         onClick={() => {
-                            Event.on(()=>{
-                               
-                            })
+                           
                     }}>
                         全部商品
                     </View>
