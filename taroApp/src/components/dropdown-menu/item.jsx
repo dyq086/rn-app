@@ -1,14 +1,27 @@
 import Taro, {Component} from '@tarojs/taro'
 import {View, Button, Text} from '@tarojs/components'
 import Event from '@/utils/event'
-import './item.less'
+import './index.less'
 class DropdownItem extends Component {
+    componentDidMount() {
+      
+    }
+    
     render() {
+        let {option} = this.props;
         return (
-            <View>
-                <Text className="mycolor" onClick={() => {
-                  Event.emit("menuvalue",{a:1,b:2})
-                    }}>我是子组件各自的啊32</Text>
+            <View className="dropdown-item">
+                {
+                option.map((item) => {
+                    return (
+                        <View className="dropdown-item__item">
+                            <View className="dropdown-item__name">{item.text}</View>
+                            <View className="dropdown-item__check"></View>
+                        </View>
+                    )
+                })
+                }
+
             </View>
         );
     }
