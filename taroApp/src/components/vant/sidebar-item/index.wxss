@@ -1,0 +1,49 @@
+@import '../common/index.wxss';.van-sidebar-item {
+  display: block;
+  box-sizing: border-box;
+  overflow: hidden;
+  word-wrap: break-word;
+  border-left: 6px solid transparent;
+  user-select: none;
+  padding: 40px 24px 40px 16px;
+  padding: var(--sidebar-padding, 40px 24px 40px 16px);
+  font-size: 28px;
+  font-size: var(--sidebar-font-size, 28px);
+  line-height: 40px;
+  line-height: var(--sidebar-line-height, 40px);
+  color: #323233;
+  color: var(--sidebar-text-color, #323233);
+  background-color: #fafafa;
+  background-color: var(--sidebar-background-color, #fafafa);
+}
+.van-sidebar-item__text {
+  position: relative;
+  display: inline-block;
+}
+.van-sidebar-item--hover:not(.van-sidebar-item--disabled) {
+  background-color: #f2f3f5;
+  background-color: var(--sidebar-active-color, #f2f3f5);
+}
+.van-sidebar-item::after {
+  border-bottom-width: 2px;
+}
+.van-sidebar-item--selected {
+  color: #323233;
+  color: var(--sidebar-selected-text-color, #323233);
+  font-weight: 500;
+  font-weight: var(--sidebar-selected-font-weight, 500);
+  border-color: #ee0a24;
+  border-color: var(--sidebar-selected-border-color, #ee0a24);
+}
+.van-sidebar-item--selected::after {
+  border-right-width: 2px;
+}
+.van-sidebar-item--selected,
+.van-sidebar-item--selected.van-sidebar-item--hover {
+  background-color: #fff;
+  background-color: var(--sidebar-selected-background-color, #fff);
+}
+.van-sidebar-item--disabled {
+  color: #c8c9cc;
+  color: var(--sidebar-disabled-text-color, #c8c9cc);
+}

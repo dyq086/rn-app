@@ -1,0 +1,58 @@
+@import '../common/index.wxss';.van-toast {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
+  color: #fff;
+  color: var(--toast-text-color, #fff);
+  font-size: 28px;
+  font-size: var(--toast-font-size, 28px);
+  line-height: 40px;
+  line-height: var(--toast-line-height, 40px);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background-color: rgba(50, 50, 51, 0.88);
+  background-color: var(--toast-background-color, rgba(50, 50, 51, 0.88));
+  border-radius: 8px;
+  border-radius: var(--toast-border-radius, 8px);
+}
+.van-toast__container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: fit-content;
+  transform: translate(-50%, -50%);
+  max-width: 70%;
+  max-width: var(--toast-max-width, 70%);
+}
+.van-toast--text {
+  min-width: 192px;
+  min-width: var(--toast-text-min-width, 192px);
+  padding: 16px 24px;
+  padding: var(--toast-text-padding, 16px 24px);
+}
+.van-toast--icon {
+  width: 180px;
+  width: var(--toast-default-width, 180px);
+  min-height: 180px;
+  min-height: var(--toast-default-min-height, 180px);
+  padding: 32px;
+  padding: var(--toast-default-padding, 32px);
+}
+.van-toast--icon .van-toast__icon {
+  font-size: 96px;
+  font-size: var(--toast-icon-size, 96px);
+}
+.van-toast--icon .van-toast__text {
+  padding-top: 16px;
+}
+.van-toast__loading {
+  margin: 20px 0;
+}
+.van-toast--top {
+  transform: translate(0, -30vh);
+}
+.van-toast--bottom {
+  transform: translate(0, 30vh);
+}

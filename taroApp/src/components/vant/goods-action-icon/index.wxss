@@ -1,0 +1,19 @@
+@import '../common/index.wxss';.van-goods-action-icon {
+  border: none !important;
+  width: 100px !important;
+  width: var(--goods-action-icon-height, 100px) !important;
+}
+.van-goods-action-icon__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  line-height: 1;
+  font-size: 20px;
+  font-size: var(--goods-action-icon-font-size, 20px);
+  color: #646566;
+  color: var(--goods-action-icon-text-color, #646566);
+}
+.van-goods-action-icon__icon {
+  margin-bottom: 8px;
+}

@@ -1,0 +1,104 @@
+@import '../common/index.wxss';.van-stepper {
+  font-size: 0;
+}
+.van-stepper__minus,
+.van-stepper__plus {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 2px;
+  vertical-align: middle;
+  border: 0;
+  background-color: #f2f3f5;
+  background-color: var(--stepper-background-color, #f2f3f5);
+  color: #323233;
+  color: var(--stepper-button-icon-color, #323233);
+  width: 56px;
+  width: var(--stepper-input-height, 56px);
+  height: 56px;
+  height: var(--stepper-input-height, 56px);
+  padding: 8px;
+  padding: var(--padding-base, 8px);
+}
+.van-stepper__minus::before,
+.van-stepper__plus::before {
+  width: 18px;
+  height: 2px;
+}
+.van-stepper__minus::after,
+.van-stepper__plus::after {
+  width: 2px;
+  height: 18px;
+}
+.van-stepper__minus::before,
+.van-stepper__plus::before,
+.van-stepper__minus::after,
+.van-stepper__plus::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-color: currentColor;
+  content: '';
+}
+.van-stepper__minus--hover,
+.van-stepper__plus--hover {
+  background-color: #e8e8e8;
+  background-color: var(--stepper-active-color, #e8e8e8);
+}
+.van-stepper__minus--disabled,
+.van-stepper__plus--disabled {
+  color: #c8c9cc;
+  color: var(--stepper-button-disabled-icon-color, #c8c9cc);
+  background-color: #f7f8fa;
+  background-color: var(--stepper-button-disabled-color, #f7f8fa);
+}
+.van-stepper__minus--disabled.van-stepper__minus--hover,
+.van-stepper__minus--disabled.van-stepper__plus--hover,
+.van-stepper__plus--disabled.van-stepper__minus--hover,
+.van-stepper__plus--disabled.van-stepper__plus--hover {
+  background-color: #f7f8fa;
+  background-color: var(--stepper-button-disabled-color, #f7f8fa);
+}
+.van-stepper__minus {
+  border-radius: 8px 0 0 8px;
+  border-radius: var(--stepper-border-radius, 8px) 0 0 var(--stepper-border-radius, 8px);
+}
+.van-stepper__minus::after {
+  display: none;
+}
+.van-stepper__plus {
+  border-radius: 0 8px 8px 0;
+  border-radius: 0 var(--stepper-border-radius, 8px) var(--stepper-border-radius, 8px) 0;
+}
+.van-stepper__input {
+  display: inline-block;
+  box-sizing: border-box;
+  min-height: 0;
+  margin: 2px;
+  padding: 2px;
+  text-align: center;
+  vertical-align: middle;
+  border: 0;
+  border-width: 2px 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  font-size: 28px;
+  font-size: var(--stepper-input-font-size, 28px);
+  color: #323233;
+  color: var(--stepper-input-text-color, #323233);
+  background-color: #f2f3f5;
+  background-color: var(--stepper-background-color, #f2f3f5);
+  width: 64px;
+  width: var(--stepper-input-width, 64px);
+  height: 56px;
+  height: var(--stepper-input-height, 56px);
+}
+.van-stepper__input--disabled {
+  color: #c8c9cc;
+  color: var(--stepper-input-disabled-text-color, #c8c9cc);
+  background-color: #f2f3f5;
+  background-color: var(--stepper-input-disabled-background-color, #f2f3f5);
+}

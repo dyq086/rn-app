@@ -1,0 +1,40 @@
+@import '../common/index.wxss';.van-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+  white-space: nowrap;
+  text-align: center;
+  transform: translate(50%, -50%);
+  transform-origin: 100%;
+  min-width: 32px;
+  min-width: var(--info-size, 32px);
+  padding: 0 6px;
+  padding: var(--info-padding, 0 6px);
+  color: #fff;
+  color: var(--info-color, #fff);
+  font-weight: 500;
+  font-weight: var(--info-font-weight, 500);
+  font-size: 24px;
+  font-size: var(--info-font-size, 24px);
+  font-family: PingFang SC, Helvetica Neue, Arial, sans-serif;
+  font-family: var(--info-font-family, PingFang SC, Helvetica Neue, Arial, sans-serif);
+  line-height: calc(32px - 2px * 2);
+  line-height: calc(var(--info-size, 32px) - var(--info-border-width, 2px) * 2);
+  background-color: #ee0a24;
+  background-color: var(--info-background-color, #ee0a24);
+  border: 2px solid #fff;
+  border: var(--info-border-width, 2px) solid var(--white, #fff);
+  border-radius: 32px;
+  border-radius: var(--info-size, 32px);
+}
+.van-info--dot {
+  min-width: 0;
+  border-radius: 100%;
+  width: 16px;
+  width: var(--info-dot-size, 16px);
+  height: 16px;
+  height: var(--info-dot-size, 16px);
+  background-color: #ee0a24;
+  background-color: var(--info-dot-color, #ee0a24);
+}
