@@ -11,11 +11,8 @@ class Index extends Component {
     navigationBarTitleText: '首页',
     usingComponents: {
       'van-dropdown-menu': '../../components/vant/dropdown-menu/index',
-      'van-dropdown-item': '../../components/vant/dropdown-item/index',
+      'van-dropdown-item': '../../components/vant/dropdown-item/index'
     }
-  }
-  constructor(params) {
-    
   }
 
   componentWillMount() {}
@@ -73,22 +70,14 @@ class Index extends Component {
         value: 'c'
       }
     ]
-    let value1=0;
-    let value2="a";
+    let value1 = 0;
+    let value2 = "a";
 
     return (
       <View className='index'>
         <van-dropdown-menu>
-          <van-dropdown-item value={
-            value1
-          } options={option1}/>
-          <van-dropdown-item
-            value={
-            value2
-          }
-            options={
-            option2
-          }/>
+          <van-dropdown-item value={value1} options={option1}/>
+          <van-dropdown-item value={value2} options={option2}/>
         </van-dropdown-menu>
         <View className="sss">开始的连接符山东矿机</View>
       </View>
