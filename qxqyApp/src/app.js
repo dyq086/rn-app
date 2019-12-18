@@ -5,8 +5,10 @@
  * @Last Modified time: 2019-11-18 18:37:40
  */
 
-import React, { Component } from 'react';
-import  AppContainer from './navigation/index'
+import React, {Component} from 'react';
+import AppContainer from './navigation/index';
+import {Provider} from 'mobx-react';
+import store from './store';
 /**
  * 入口文件
  * @export
@@ -14,9 +16,11 @@ import  AppContainer from './navigation/index'
  * @extends {React.Component}
  */
 export default class App extends Component {
-    render() {
-        return (
-            <AppContainer />
-        )
-    }
+  render() {
+    return (
+      <Provider {...store}>
+        <AppContainer />
+      </Provider>
+    );
+  }
 }

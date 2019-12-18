@@ -16,11 +16,13 @@ const service = axios.create({
 // 添加请求拦截器
 service.interceptors.request.use(
   function(config) {
+    console.log('======request======', config);
     // 在发送请求之前做些什么
     return config;
   },
   function(error) {
     // 对请求错误做些什么
+    console.error('======request-error======', error);
     return Promise.reject(error);
   },
 );
@@ -29,10 +31,12 @@ service.interceptors.request.use(
 service.interceptors.response.use(
   response => {
     // 对响应数据做点什么
+    console.log('======response======', response);
     return response.data;
   },
   function(error) {
     // 对响应错误做点什么
+    console.error('======response-error======', error);
     return Promise.reject(error);
   },
 );
