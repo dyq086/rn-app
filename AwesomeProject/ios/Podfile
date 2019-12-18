@@ -40,6 +40,8 @@ target 'AwesomeProject' do
 
   pod 'react-native-webview', :path => '../node_modules/react-native-webview'
 
+  pod 'react-native-viewpager', :path => '../node_modules/@react-native-community/viewpager'
+
   target 'AwesomeProjectTests' do
     inherit! :search_paths
     # Pods for testing

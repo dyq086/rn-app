@@ -77,7 +77,8 @@ import com.android.build.OutputFile
 
 project.ext.react = [
     entryFile: "index.js",
-    enableHermes: false,  // clean and rebuild if changing
+    enableHermes: false, 
+    bundleInDebug:true // clean and rebuild if changing
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
@@ -179,6 +180,7 @@ android {
 }
 
 dependencies {
+    implementation project(':@react-native-community_viewpager')
     implementation project(':react-native-webview')
     implementation project(':react-native-vector-icons')
     implementation fileTree(dir: "libs", include: ["*.jar"])
