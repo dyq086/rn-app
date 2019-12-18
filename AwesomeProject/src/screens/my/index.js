@@ -13,7 +13,7 @@ class MyScreen extends Component {
         let { navigation } = this.props;
         return (
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-		        <Text>HomeScreen Screen2</Text>
+		        <Text>HomeScreen Screen</Text>
 		        <Button title="打开网页" onPress={()=>navigation.navigate("AppWebView")}/>
 		    </View>
         );
