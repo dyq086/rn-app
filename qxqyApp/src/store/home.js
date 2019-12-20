@@ -48,7 +48,6 @@ class HomeStore {
         });
       });
     }
-
     return tempArray;
   }
 }
