@@ -4,10 +4,18 @@
  * @Autor: yongqing
  * @Date: 2019-12-18 16:53:59
  * @LastEditors  : yongqing
- * @LastEditTime : 2019-12-18 16:54:24
+ * @LastEditTime : 2019-12-22 17:07:10
  */
 import {observable, action, computed} from 'mobx';
+import remotedev from 'mobx-remotedev';
 import {getHomeList} from '@/interfaces/home';
+
+
+@remotedev({
+  name: 'HomeStore',
+  global:true
+  // Options: https://github.com/zalmoxisus/mobx-remotedev#api
+})
 class HomeStore {
   @observable text; // 注册变量，使其成为可检测的
   @observable num;
