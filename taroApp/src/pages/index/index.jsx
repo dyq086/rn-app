@@ -1,25 +1,26 @@
 import Taro, {Component} from '@tarojs/taro'
 import {View, Button, Text} from '@tarojs/components'
 import {observer, inject} from '@tarojs/mobx'
+import List from './list'
 import './index.less'
 
-@inject('counterStore')
+@inject('homeStore')
 @observer
 class Index extends Component {
-
   config = {
-    navigationBarTitleText: '首页',
-    usingComponents: {
-      'van-dropdown-menu': '../../components/vant/dropdown-menu/index',
-      'van-dropdown-item': '../../components/vant/dropdown-item/index'
+    navigationBarTitleText: '首页'
+  }
+  cat = Taro.createRef();
+  state = {
+    vb: '2432',
+    obj: {
+      a: 1,
+      b: '呜呜呜呜呜呜'
     }
   }
-
   componentWillMount() {}
 
-  componentWillReact(...arg) {
-    console.log('componentWillReact', arg)
-  }
+  componentWillReact() {}
 
   componentDidMount() {}
 
@@ -30,56 +31,33 @@ class Index extends Component {
   componentDidHide() {}
 
   increment = () => {
-    const {counterStore} = this.props
-    counterStore.getGoodList()
+    let {add, changeName} = this.props.homeStore;
+    this.setState({vb: 'zzzzzzz'})
+    add();
+    changeName()
   }
+  roar() {
+    console.log(this.cat.current)
+    this
+      .cat
+      .current
+      .setState({zzz: 'updata'})
 
-  decrement = () => {
-    const {counterStore} = this.props
-    counterStore.decrement()
   }
-
-  incrementAsync = () => {
-    const {counterStore} = this.props;
-    counterStore.incrementAsync()
+  changeState = () => {
+    this.setState(prevState => ({
+      [prevState.obj.b]: '哈哈哈哈哈哈'
+    }))
   }
-
   render() {
-    let option1 = [
-      {
-        text: '全部商品',
-        value: 0
-      }, {
-        text: '新款商品',
-        value: 1
-      }, {
-        text: '活动商品',
-        value: 2
-      }
-    ]
-
-    let option2 = [
-      {
-        text: '默认排序',
-        value: 'a'
-      }, {
-        text: '好评排序',
-        value: 'b'
-      }, {
-        text: '销量排序',
-        value: 'c'
-      }
-    ]
-    let value1 = 0;
-    let value2 = "a";
+    let {num} = this.props.homeStore;
 
     return (
       <View className='index'>
-        <van-dropdown-menu>
-          <van-dropdown-item value={value1} options={option1}/>
-          <van-dropdown-item value={value2} options={option2}/>
-        </van-dropdown-menu>
-        <View className="sss">开始的连接符山东矿机</View>
+        <List ref={this.cat}/>
+        <Text onClick={() => this.roar()}>{num}</Text>
+        <View className="sss" onClick={() => this.increment()}>开始的连接符山东矿机</View>
+        <Text onClick={() => this.changeState()}>{this.state.obj.b}</Text>
       </View>
     )
   }

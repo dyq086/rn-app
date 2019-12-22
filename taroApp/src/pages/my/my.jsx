@@ -5,8 +5,6 @@ import { observer, inject } from '@tarojs/mobx'
 import './my.less'
 
 
-@inject('counterStore')
-@observer
 class My extends Component {
 
   config = {
@@ -27,29 +25,13 @@ class My extends Component {
 
   componentDidHide () { }
 
-  increment = () => {
-    const { counterStore } = this.props
-    counterStore.increment()
-  }
-
-  decrement = () => {
-    const { counterStore } = this.props
-    counterStore.decrement()
-  }
-
-  incrementAsync = () => {
-    const { counterStore } = this.props
-    counterStore.incrementAsync()
-  }
 
   render () {
-    const { counterStore: { counter } } = this.props
+   
     return (
       <View className='my'>
-        <Button onClick={this.increment}>+</Button>
-        <Button onClick={this.decrement}>-</Button>
-        <Button onClick={this.incrementAsync}>Add Async</Button>
-        <Text>{counter}</Text>
+      
+        <Text>my page</Text>
       </View>
     )
   }
