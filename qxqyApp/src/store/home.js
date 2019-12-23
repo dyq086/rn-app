@@ -4,12 +4,11 @@
  * @Autor: yongqing
  * @Date: 2019-12-18 16:53:59
  * @LastEditors  : yongqing
- * @LastEditTime : 2019-12-22 17:07:10
+ * @LastEditTime : 2019-12-23 17:01:24
  */
 import {observable, action, computed} from 'mobx';
 import remotedev from 'mobx-remotedev';
 import {getHomeList} from '@/interfaces/home';
-
 
 @remotedev({
   name: 'HomeStore',
@@ -17,15 +16,16 @@ import {getHomeList} from '@/interfaces/home';
   // Options: https://github.com/zalmoxisus/mobx-remotedev#api
 })
 class HomeStore {
-  @observable text; // 注册变量，使其成为可检测的
   @observable num;
   @observable result;
   @observable tabs;
 
   constructor() {
-    this.num = 0; // 初始化变量，可以定义默认值
-    this.text = 'Hello, this is homePage!!!';
-    this.result = {};
+    this.num = 0; 
+    this.result = {
+      projectList: [],
+      bbsConfig:[]
+    };
     this.tabs = [];
   }
 
