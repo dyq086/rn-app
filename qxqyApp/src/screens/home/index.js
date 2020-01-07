@@ -2,7 +2,7 @@
  * @Author: yongqing
  * @Date:   2019-11-18 18:00:58
  * @Last Modified by:   yongqing
- * @Last Modified time: 2019-11-19 16:54:45
+ * @Last Modified time: 2019-12-23 17:54:45
  */
 
 import React, {Component} from 'react';
@@ -15,10 +15,9 @@ import {
   SafeAreaView,
   Dimensions,
 } from 'react-native';
-import {Tabs, Button, Toast} from '@ant-design/react-native';
+import {Tabs} from '@ant-design/react-native';
 import {observer, inject} from 'mobx-react';
 const winWidth = Dimensions.get('window').width;
-const winHeight = Dimensions.get('window').height;
 
 @inject('homeStore')
 @observer
